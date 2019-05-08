@@ -1,5 +1,12 @@
 <?php
-    for($counter = 1; $counter <= 6; $counter++)        
+    
+    print("<i><B>距离星期一还有几天？</B></i>\n");
+    print("<OL>\n");
+    for($currentDate = date("U");          
+        date("l", $currentDate) != "Monday";    
+        $currentDate += (60 * 60 * 24))     
     {
-        print("<B>counter is $counter</B><BR>\n");  
-?>
+        print("<LI>" . date("l", $currentDate) . "\n");
+    }
+
+  
